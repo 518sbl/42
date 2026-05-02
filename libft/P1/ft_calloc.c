@@ -1,9 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ankalini <ankalini@learner.42.tech>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/02 19:53:39 by ankalini          #+#    #+#             */
+/*   Updated: 2026/05/02 19:54:25 by ankalini         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-*/
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n);
 void *ft_calloc(size_t nmemb, size_t size)

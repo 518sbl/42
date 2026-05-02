@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcheddad <mcheddad@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: ankalini <ankalini@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 16:27:23 by ankalini          #+#    #+#             */
-/*   Updated: 2026/04/29 14:16:50 by mcheddad         ###   ########.fr       */
+/*   Updated: 2026/05/02 19:54:29 by ankalini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <stdio.h>
-*/
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

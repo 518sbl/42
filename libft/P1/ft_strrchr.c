@@ -6,13 +6,11 @@
 /*   By: ankalini <ankalini@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 14:44:29 by ankalini          #+#    #+#             */
-/*   Updated: 2026/04/28 15:27:07 by ankalini         ###   ########.fr       */
+/*   Updated: 2026/05/02 19:57:41 by ankalini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <stdio.h>
-*/
+#include "libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {

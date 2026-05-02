@@ -6,14 +6,11 @@
 /*   By: ankalini <ankalini@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 13:24:28 by ankalini          #+#    #+#             */
-/*   Updated: 2026/04/28 13:26:45 by ankalini         ###   ########.fr       */
+/*   Updated: 2026/05/02 19:56:02 by ankalini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <stdio.h>
-#include <stddef.h>
-*/
+#include "libft.h"
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
