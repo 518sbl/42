@@ -6,7 +6,7 @@
 /*   By: ankalini <ankalini@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 14:02:53 by ankalini          #+#    #+#             */
-/*   Updated: 2026/05/04 18:30:04 by ankalini         ###   ########.fr       */
+/*   Updated: 2026/05/05 12:40:37 by ankalini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	while (*s)
 	{
-		if ((unsigned char)*s == (unsigned char)c)
+		if (*s == (char)c)
 			return ((char *)s);
 		s++;
 	}
-	if ((unsigned char)c == '\0')
+	if ((char)c == '\0')
 		return ((char *)s);
 	return (NULL);
 }

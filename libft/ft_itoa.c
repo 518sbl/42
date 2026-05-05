@@ -6,7 +6,7 @@
 /*   By: ankalini <ankalini@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/02 19:36:30 by ankalini          #+#    #+#             */
-/*   Updated: 2026/05/04 18:47:11 by ankalini         ###   ########.fr       */
+/*   Updated: 2026/05/05 13:11:04 by ankalini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int	count_numbers(int n)
 
 	numbers = 0;
 	if (n <= 0)
-		numbers = 1;
+		numbers ++;
 	while (n != 0)
 	{
-		n /= 10;
+		n = n / 10;
 		numbers++;
 	}
 	return (numbers);
@@ -29,26 +29,28 @@ int	count_numbers(int n)
 
 char	*ft_itoa(int n)
 {
-	long	nb;
+	char	*str;
 	int		len;
-	int		neg;
-	char	*result;
+	long	nb;
 
-	nb = (long)n;
-	neg = (nb < 0);
-	if (!neg)
-		nb = -nb;
-	len = count_numbers(n);
-	result = malloc(len + 1);
-	if (!result)
+	nb = n;
+	len = count_numbers(nb);
+	str = malloc(len + 1);
+	if (!str)
 		return (NULL);
-	result[len] = '\0';
-	if (neg)
-		result[0] = '-';
-	while (len-- > neg)
+	str[len] = '\0';
+	if (nb < 0)
 	{
-		result[len] = '0' - (nb % 10);
-		nb /= 10;
+		str[0] = '-';
+		nb = -nb;
 	}
-	return (result);
+	if (nb == 0)
+		str[0] = '0';
+	while (nb > 0)
+	{
+		len--;
+		str[len] = nb % 10 + '0';
+		nb = nb / 10;
+	}
+	return (str);
 }

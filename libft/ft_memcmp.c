@@ -6,7 +6,7 @@
 /*   By: ankalini <ankalini@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 13:30:42 by ankalini          #+#    #+#             */
-/*   Updated: 2026/05/04 18:16:45 by ankalini         ###   ########.fr       */
+/*   Updated: 2026/05/05 12:29:20 by ankalini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*ptr;
 	unsigned char	*ptrd;
+	size_t			i;
 
 	ptr = (unsigned char *)s1;
 	ptrd = (unsigned char *)s2;
-	while (n > 0)
+	i = 0;
+	while (i < n)
 	{
-		if (*ptr != *ptrd)
-			return (*ptr - *ptrd);
-		ptr++;
-		ptrd++;
-		n--;
+		if (ptr[i] != ptrd[i])
+			return (ptr[i] - ptrd[i]);
+		i++;
 	}
 	return (0);
 }
