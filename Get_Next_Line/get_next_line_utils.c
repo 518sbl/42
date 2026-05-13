@@ -6,7 +6,7 @@
 /*   By: ankalini <ankalini@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 12:06:52 by ankalini          #+#    #+#             */
-/*   Updated: 2026/05/11 17:43:24 by ankalini         ###   ########.fr       */
+/*   Updated: 2026/05/13 13:19:04 by ankalini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (char)c)
-			return((char *)s);
-			s++;
+			return ((char *)s);
+		s++;
 	}
 	if ((char)c == '\0')
-		return((char * )s);
+		return ((char *)s);
 	return (NULL);
 }
 
@@ -66,9 +66,9 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int	j;
-	char *result;
+	int		i;
+	int		j;
+	char	*result;
 
 	result = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	j = 0;
