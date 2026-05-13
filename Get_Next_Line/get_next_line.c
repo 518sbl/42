@@ -6,7 +6,7 @@
 /*   By: ankalini <ankalini@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/11 12:06:29 by ankalini          #+#    #+#             */
-/*   Updated: 2026/05/13 13:18:37 by ankalini         ###   ########.fr       */
+/*   Updated: 2026/05/13 17:48:01 by ankalini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,29 @@
 
 static char	*read_and_store(int fd, char *stock)
 {
-	char	buf[BUFFER_SIZE + 1];
+	char	*buf;
 	int		bytes_read;
 	char	*result;
 
 	bytes_read = 1;
+	buf = malloc(BUFFER_SIZE + 1);
+	if (!buf)
+		return (NULL);
 	if (!stock)
 		stock = ft_strjoin("", "");
+	if (!stock)
+		return (free(buf), NULL);
 	while (!ft_strchr(stock, '\n') && bytes_read > 0)
 	{
 		bytes_read = read(fd, buf, BUFFER_SIZE);
 		if (bytes_read < 0)
-			return (NULL);
+			return (free(stock), free(buf), NULL);
 		buf[bytes_read] = '\0';
 		result = ft_strjoin(stock, buf);
-		free(stock);
+		free (stock);
 		stock = result;
-		if (stock && stock[0] == '\0')
-		{
-			free (stock);
-			return (NULL);
-		}
 	}
+	free (buf);
 	return (stock);
 }
 
@@ -78,7 +79,11 @@ char	*get_next_line(int fd)
 		return (NULL);
 	stock = read_and_store(fd, stock);
 	if (!stock || stock[0] == '\0')
+	{
+		free(stock);
+		stock = NULL;
 		return (NULL);
+	}
 	result = extract_line(stock);
 	stock = clean_stock(stock);
 	return (result);
