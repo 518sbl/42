@@ -66,4 +66,4 @@ Reading a file with a fixed `BUFFER_SIZE` means a single `read()` call can conta
 
 ### AI usage
 
-Claude (claude.ai) was used during this project as a learning support tool — to understand concepts (static variables, file descriptors, pointer arithmetic) and to get feedback on code errors. Claude did not write the code directly; it explained concepts and pointed out mistakes so I could correct them myself.
+Claude (claude.ai) was used during this project as a learning support tool — to understand concepts (static variables, file descriptors, pointer arithmetic). Claude did not write the code directly; it explained concepts and pointed out mistakes so I could correct them myself.
